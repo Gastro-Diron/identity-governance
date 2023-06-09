@@ -130,16 +130,8 @@ public class UserSelfRegistrationHandler extends AbstractEventHandler {
                 String preferredChannel = resolveNotificationChannel(eventProperties, userName, tenantDomain,
                         domainName);
 
-//                Map<String, String> configs = new HashMap<>();
-//                configs.put(IdentityRecoveryConstants.ConnectorConfig.ENABLE_EMAIL_OTP_VERIFICATION, "false");
-//                IdentityGovernanceService identityGovernanceService = IdentityRecoveryServiceDataHolder.getInstance()
-//                    .getIdentityGovernanceService();
-//                identityGovernanceService.updateConfiguration(tenantDomain, configs);
-
-                boolean emailOTPenabled = false;
-
-//                boolean emailOTPenabled = Boolean.parseBoolean(Utils.getConnectorConfig(
-//                        IdentityRecoveryConstants.ConnectorConfig.ENABLE_EMAIL_OTP_VERIFICATION, user.getTenantDomain()));
+                boolean emailOTPenabled = Boolean.parseBoolean(Utils.getConnectorConfig(
+                        IdentityRecoveryConstants.ConnectorConfig.ENABLE_EMAIL_OTP_VERIFICATION, user.getTenantDomain()));
 
                 String verificationMethod = resolveVerificationMethod(eventProperties, userName, tenantDomain,
                         domainName, emailOTPenabled);
