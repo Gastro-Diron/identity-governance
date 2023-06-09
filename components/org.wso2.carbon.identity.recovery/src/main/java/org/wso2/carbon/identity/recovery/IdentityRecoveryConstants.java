@@ -540,7 +540,7 @@ public class IdentityRecoveryConstants {
                 ".Password.ReCaptcha.MaxFailedAttempts";
         public static final String RECOVERY_CALLBACK_REGEX = "Recovery.CallbackRegex";
         public static final String ENABLE_SELF_SIGNUP = "SelfRegistration.Enable";
-        public static final String ENABLE_EMAIL_OTP_VERIFICATION = "EmailOTPVerification.Enable";
+        public static final String ENABLE_EMAIL_OTP_VERIFICATION = "SelfRegistration.EmailOTPVerification.Enable";
         public static final String ACCOUNT_LOCK_ON_CREATION = "SelfRegistration.LockOnCreation";
         public static final String SEND_CONFIRMATION_NOTIFICATION = "SelfRegistration.SendConfirmationOnCreation";
         public static final String SIGN_UP_NOTIFICATION_INTERNALLY_MANAGE = "SelfRegistration.Notification" +

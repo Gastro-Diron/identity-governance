@@ -20,6 +20,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.wso2.carbon.CarbonConstants;
+import org.wso2.carbon.identity.application.common.model.IdentityProviderProperty;
 import org.wso2.carbon.identity.application.common.model.User;
 import org.wso2.carbon.identity.base.IdentityRuntimeException;
 import org.wso2.carbon.identity.core.bean.context.MessageContext;
@@ -29,8 +30,7 @@ import org.wso2.carbon.identity.event.IdentityEventConstants;
 import org.wso2.carbon.identity.event.IdentityEventException;
 import org.wso2.carbon.identity.event.event.Event;
 import org.wso2.carbon.identity.event.handler.AbstractEventHandler;
-import org.wso2.carbon.identity.governance.IdentityGovernanceUtil;
-import org.wso2.carbon.identity.governance.IdentityMgtConstants;
+import org.wso2.carbon.identity.governance.*;
 import org.wso2.carbon.identity.governance.exceptions.notiification.NotificationChannelManagerClientException;
 import org.wso2.carbon.identity.governance.exceptions.notiification.NotificationChannelManagerException;
 import org.wso2.carbon.identity.governance.service.notification.NotificationChannelManager;
@@ -92,6 +92,8 @@ public class UserSelfRegistrationHandler extends AbstractEventHandler {
         boolean enable = Boolean.parseBoolean(Utils.getConnectorConfig(
                 IdentityRecoveryConstants.ConnectorConfig.ENABLE_SELF_SIGNUP, user.getTenantDomain()));
 
+        String watch = IdentityProviderProperty.class.getName();
+
         if (!enable) {
             //Self signup feature is disabled
 
@@ -128,7 +130,13 @@ public class UserSelfRegistrationHandler extends AbstractEventHandler {
                 String preferredChannel = resolveNotificationChannel(eventProperties, userName, tenantDomain,
                         domainName);
 
-                boolean emailOTPenabled =true;
+//                Map<String, String> configs = new HashMap<>();
+//                configs.put(IdentityRecoveryConstants.ConnectorConfig.ENABLE_EMAIL_OTP_VERIFICATION, "false");
+//                IdentityGovernanceService identityGovernanceService = IdentityRecoveryServiceDataHolder.getInstance()
+//                    .getIdentityGovernanceService();
+//                identityGovernanceService.updateConfiguration(tenantDomain, configs);
+
+                boolean emailOTPenabled = false;
 
 //                boolean emailOTPenabled = Boolean.parseBoolean(Utils.getConnectorConfig(
 //                        IdentityRecoveryConstants.ConnectorConfig.ENABLE_EMAIL_OTP_VERIFICATION, user.getTenantDomain()));
