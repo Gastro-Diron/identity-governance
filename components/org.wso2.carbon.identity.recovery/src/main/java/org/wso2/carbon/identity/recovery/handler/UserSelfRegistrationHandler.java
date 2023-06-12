@@ -520,7 +520,7 @@ public class UserSelfRegistrationHandler extends AbstractEventHandler {
         }
         if (IdentityRecoveryConstants.OTP_VERIFICATION.equalsIgnoreCase(verificationMethod)) {
             properties.put(IdentityRecoveryConstants.TEMPLATE_TYPE,
-                    IdentityRecoveryConstants.NOTIFICATION_TYPE_EMAIL_OTP);
+                    IdentityRecoveryConstants.NOTIFICATION_TYPE_ACCOUNT_CONFIRM_EMAIL_OTP);
         } else {
             properties.put(IdentityRecoveryConstants.TEMPLATE_TYPE,
                     IdentityRecoveryConstants.NOTIFICATION_TYPE_ACCOUNT_CONFIRM);
