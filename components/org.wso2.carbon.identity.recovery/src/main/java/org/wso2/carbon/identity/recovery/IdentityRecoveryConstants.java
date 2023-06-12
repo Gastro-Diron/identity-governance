@@ -45,7 +45,7 @@ public class IdentityRecoveryConstants {
     public static final String NOTIFICATION_TYPE_RESEND_ADMIN_FORCED_PASSWORD_RESET_WITH_OTP =
             "resendAdminForcedPasswordResetWithOTP";
     public static final String NOTIFICATION_TYPE_ACCOUNT_CONFIRM = "accountconfirmation";
-    public static final String NOTIFICATION_TYPE_ACCOUNT_CONFIRM_EMAIL_OTP = "accountConfirmationOTP";
+    public static final String NOTIFICATION_TYPE_ACCOUNT_CONFIRM_EMAIL_OTP = "accountConfirmationEmailOTP";
     public static final String NOTIFICATION_TYPE_RESEND_ACCOUNT_CONFIRM = "resendaccountconfirmation";
     public static final String NOTIFICATION_TYPE_EMAIL_CONFIRM = "emailconfirm";
     public static final String NOTIFICATION_TYPE_LITE_USER_EMAIL_CONFIRM = "liteUserEmailConfirmation";
